@@ -8,8 +8,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jotion",
-  description: "The connected workspace where better, faster work happens.",
+  title: "Notary",
+  description: "Your notes at your fingertips.",
   icons: {
     icon: [
       {
@@ -39,7 +39,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-          storageKey="jotion-theme-2"
+          storageKey="notary-theme"
         >
           {children}
         </ThemeProvider>

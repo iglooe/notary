@@ -5,7 +5,9 @@ export const Heading = () => {
     <div className="max-w-3xl space-y-4">
       <h1 className="text-4xl md:text-5xl font-bold">
         Your Ideas, Documents, & Plans. Unified. Welcome to{" "}
-        <span className="underline">Notary</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-l from-[#ff9844] to-[#fbff00]">
+          Notary
+        </span>
       </h1>
       <h3 className="text-base sm:text-xl md:text-2xl font-medium">
         Notary is the connected workspace where <br />
