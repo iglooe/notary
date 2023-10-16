@@ -5,7 +5,7 @@ export const Heading = () => {
     <div className="max-w-3xl space-y-4">
       <h1 className="text-4xl md:text-5xl font-bold">
         Your Ideas, Documents, & Plans. Unified. Welcome to{" "}
-        <span className="bg-clip-text text-transparent bg-gradient-to-l from-[#ff9844] to-[#fbff00]">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           Notary
         </span>
       </h1>
