@@ -1,6 +1,15 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
+
+import Link from "next/link";
+import { Spinner } from "@/components/spinner";
+import { Button } from "@/components/ui/button";
+import { useConvexAuth } from "convex/react";
+import { SignInButton } from "@clerk/clerk-react";
+
 export const Heading = () => {
+  const { isAuthenticated, isLoading } = useConvexAuth();
   return (
     <div className="max-w-3xl space-y-4">
       <h1 className="text-4xl md:text-5xl font-bold">
@@ -13,6 +22,26 @@ export const Heading = () => {
         Notary is the connected workspace where <br />
         better, faster work happens.
       </h3>
+      {isLoading && (
+        <div className="w-full flex items-center justify-center">
+          <Spinner size="lg" />
+        </div>
+      )}
+      {isAuthenticated && !isLoading && (
+        <Button asChild>
+          <Link href="/documents">
+            Enter Notary <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </Button>
+      )}
+      {!isAuthenticated && !isLoading && (
+        <SignInButton mode="modal">
+          <Button>
+            Get Notary free
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Button>
+        </SignInButton>
+      )}
     </div>
   );
 };

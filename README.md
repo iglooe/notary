@@ -2,13 +2,13 @@
 
 ## Getting Started
 
-Start convex development server:
+Start convex server:
 
 ```bash
 npx convex dev
 ```
 
-First, run the development server:
+Secondly, run the development server:
 
 ```bash
 npm run dev
