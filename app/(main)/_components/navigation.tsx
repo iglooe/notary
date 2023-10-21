@@ -1,6 +1,12 @@
 "use client";
 
-import { ChevronsLeftIcon, MenuIcon, PlusCircle } from "lucide-react";
+import {
+  ChevronsLeftIcon,
+  MenuIcon,
+  PlusCircle,
+  Search,
+  Settings,
+} from "lucide-react";
 import { ElementRef, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { useMediaQuery } from "usehooks-ts";
@@ -125,6 +131,8 @@ export const Navigation = () => {
         </div>
         <div>
           <UserItem />
+          <Item label="search" icon={Search} isSearch onClick={() => {}} />
+          <Item label="settings" icon={Settings} onClick={() => {}} />
           <Item onClick={handleCreate} label="New Page" icon={PlusCircle} />
         </div>
         <div className="mt-4">
