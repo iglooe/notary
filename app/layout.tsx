@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import { GeistSans, GeistMono } from "geist/font";
+import { GeistSans } from "geist/font";
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 
@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={GeistSans.className}>
+      <body className={inter.className}>
         <ConvexClientProvider>
           <ThemeProvider
             attribute="class"
